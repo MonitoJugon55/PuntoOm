@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoreLab Systems | Soluciones de Hardware</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0d59f2",
+              "background-dark": "#050505",
+              "accent-cyan": "#00f3ff",
+              "accent-violet": "#bc13fe",
+              "surface-dark": "#0e0e0e"
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+            },
+            boxShadow: {
+              'neon-blue': '0 0 20px rgba(13, 89, 242, 0.4)',
+              'neon-cyan': '0 0 15px rgba(0, 243, 255, 0.3)',
+              'neon-violet': '0 0 15px rgba(188, 19, 254, 0.3)',
+            },
+            animation: {
+              'slow-pulse': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2s infinite linear',
+            },
+            keyframes: {
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: white;
+      }
+      .glass-morphism {
+        background: rgba(14, 14, 14, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .tech-grid {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .scanlines {
+        background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.2) 50%);
+        background-size: 100% 4px;
+        pointer-events: none;
+      }
+      .clip-tech {
+        clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+      }
+      .particles-bg {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: radial-gradient(circle at center, transparent 0%, #050505 100%);
+        z-index: -1;
+      }
+      .particles-bg::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: floating 60s linear infinite;
+      }
+      @keyframes floating {
+        from { transform: translateY(0); }
+        to { transform: translateY(-1000px); }
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1a1a1a;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2a2a2a;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+  <script type="module" crossorigin src="assets/index-DedlNnWa.js"></script>
+</head>
+  <body class="font-display overflow-x-hidden">
+    <div class="particles-bg"></div>
+    <div id="root"></div>
+  </body>
+</html>
